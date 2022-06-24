@@ -7,9 +7,94 @@
   padding: 4rem 0;
   flex: 1;
   display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.grid1{
+  width: 20%;
+  min-height: 50;
+
+}
+
+.grid2{
+  width: 25%;
+  min-height: 50;
+}
+
+.grid3{
+  /* background-color: #9eba92; */
+  width: 55%;
+  min-height: 50;
+}
+
+.firstCol{
+  height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.firstImg{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20%;
+}
+
+.firstRef{
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.secondCol{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+background-color: #FFF2EE;
+}
+.secondSearch{
+  /* background-color: rgb(78, 23, 23); */
+  /* height: 20%; */
+}
+
+.secondHeading{
+  width:100%;
+}
+
+.secondHead{
+  display: inline-block; 
+  margin:10px 30px;
+}
+
+.secondCardInner{
+  display: inline-block; 
+  margin: 6px;
+}
+
+.thirdCol{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin:'0px 30px';
+  justify-content: space-around;
+}
+.thirdRow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;  
+  /* min-height: 200; */
+  padding:'0px, 30px';
+  justify-content: space-between;
 }
 
 .footer {
@@ -73,7 +158,7 @@
   max-width: 800px;
 }
 
-.card {
+.card1 {
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -88,7 +173,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
+  /* color: #0070f3; */
   border-color: #0070f3;
 }
 
@@ -114,3 +199,4 @@
     flex-direction: column;
   }
 }
+
