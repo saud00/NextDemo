@@ -13,10 +13,10 @@ function FirstCol() {
             <img src='/3.jpeg' height={100} width={100} style={{borderRadius: 14}} />
         </div>
         <div className={styles.firstRef} >
-            <div style={{display: 'flex', color:'#C0C0C0', fontFamily:'Montserrat' }} > <AssignmentIcon/> &nbsp; Journals</div>
-            <div  style={{display: 'flex', color:'#C0C0C0', fontFamily:'Montserrat'}}> <EditIcon/>&nbsp; Drafts</div>
-            <div style={{display: 'flex', color:'#C0C0C0', fontFamily:'Montserrat'}}> <StarIcon/>&nbsp;Favourate</div>
-            <div style={{display: 'flex', color:'#C0C0C0', fontFamily:'Montserrat'}}> <SettingsIcon/> &nbsp;Settings</div>
+            <div style={{display: 'flex', color:'#C0C0C0' }} > <AssignmentIcon/> &nbsp; Journals</div>
+            <div  style={{display: 'flex', color:'#C0C0C0'}}> <EditIcon/>&nbsp; Drafts</div>
+            <div style={{display: 'flex', color:'#C0C0C0'}}> <StarIcon/>&nbsp;Favourate</div>
+            <div style={{display: 'flex', color:'#C0C0C0'}}> <SettingsIcon/> &nbsp;Settings</div>
         </div>
         {/* <div  className={styles.firstlast}>
           <ScreenShareIcon/>

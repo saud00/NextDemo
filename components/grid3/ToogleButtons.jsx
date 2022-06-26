@@ -13,6 +13,34 @@ import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import { TextField, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import NavigationIcon from '@mui/icons-material/Navigation'
+import { SmartButton } from '@mui/icons-material';
+
+
+const CssTextField = styled(TextField, {
+  shouldForwardProp: (props) => props !== "focusColor"
+})((p) => ({
+  // input label when focused
+  "& label.Mui-focused": {
+    color: p.focusColor
+  },
+  // focused color for input with variant='standard'
+  "& .MuiInput-underline:after": {
+    borderBottomColor: p.focusColor
+  },
+  // focused color for input with variant='filled'
+  "& .MuiFilledInput-underline:after": {
+    borderBottomColor: p.focusColor
+  },
+  // focused color for input with variant='outlined'
+  "& .MuiOutlinedInput-root": {
+    "&.Mui-focused fieldset": {
+      borderColor: p.focusColor
+    }
+  }
+}));
+
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   '& .MuiToggleButtonGroup-grouped': {
@@ -30,6 +58,36 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     },
   },
 }));
+
+ function SelectSmall({val, w}) {
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
+  return (
+    <FormControl sx={{ m: 1, minWidth: val == 'Arial' ? 120: 70 , color:'white',  }} size="small">
+      <InputLabel id="demo-select-small"  sx={{color:'white'}}>{val}</InputLabel>
+      {/* <CssTextField focusColor='red' /> */}
+      <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        // value='Arial'
+        // label={val}
+        onChange={handleChange}
+        sx={{color:'white', borderRadius:4, borderColor:'white'}}
+      >
+        <MenuItem value="">
+          {/* <em>None</em> */}
+        </MenuItem>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+      </Select>
+    </FormControl>
+  );
+}
 
 export default function CustomizedDividers() {
   const [alignment, setAlignment] = React.useState('left');
@@ -63,6 +121,8 @@ export default function CustomizedDividers() {
           onChange={handleAlignment}
           aria-label="text alignment"
         >
+             <SelectSmall val='Arial' w='100' />
+             <SelectSmall val='14' w='50' />
           <ToggleButton value="left" aria-label="left aligned">
             <FormatAlignLeftIcon />
           </ToggleButton>

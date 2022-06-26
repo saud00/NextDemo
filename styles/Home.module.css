@@ -50,6 +50,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  font-family: 'Anek Latin', sans-serif;
 }
 
 .firstlast{
@@ -86,6 +87,8 @@ background-color: #FFF2EE;
 }
 
 .secondHead{
+  font-family: 'Nunito Sans', sans-serif;
+  color:rgb(120, 113, 113);
   display: inline-block; 
   margin:10px 30px;
 }
@@ -102,6 +105,7 @@ background-color: #FFF2EE;
   margin:'0px 30px';
   justify-content: space-around;
   padding: 20px;
+  /* background-color: blueviolet; */
 }
 .thirdRow{
   display: flex;
@@ -216,3 +220,24 @@ background-color: #FFF2EE;
   }
 }
 
+
+.notes {
+  background-attachment: local;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 30px, #E29578 30px, #E29578 31px, #E29578 31px);
+    line-height: 10px;
+    padding: 18px 0px;
+    overflow: hidden;
+}
+
+.MuiSvgIcon-root {
+  color: red;
+}
+.css-ghsjzk-MuiInputBase-root-MuiInput-root:before {
+  border-bottom-color: red !important;
+}
+.css-ghsjzk-MuiInputBase-root-MuiInput-root:after {
+  border-bottom-color: red !important;
+}

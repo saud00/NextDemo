@@ -23,7 +23,7 @@ function ThirdRow() {
                 </div>
             </div>
 
-            <div style={{width:'30%',color:'#006D77' }}>
+            <div style={{width:'30%' }}>
                 <CachedIcon sx={{ color:'silver' }}/> &nbsp;&nbsp;&nbsp;
                 <IntegrationInstructionsIcon sx={{ color:'#006D77' }}/>
             </div>

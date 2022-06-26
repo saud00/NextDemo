@@ -5,6 +5,7 @@ import ThirdRow from './ThirdRow';
 import ThirdForm from './ThirdForm';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import CustomizedDividers from './ToogleButtons';
+import { Divider } from '@mui/material';
 
 function ThirdCol() {
   return (
@@ -14,9 +15,17 @@ function ThirdCol() {
         </div>
 
 
-        <div  >
-                <CustomizedDividers  />
-            </div>
+          <div style={{width: '90%',  backgroundColor:"#84CCC5",  color:'white', margin:'15px 0px' }}>
+              <CustomizedDividers  />
+
+              <div style={{minHeight:40, backgroundColor:"#84CCC5", display:'flex', flexDirection:'row',borderRadius:'10px' ,justifyContent:'space-evenly', marginTop:'14px' }} >
+                <div>Blue</div>
+                   <Divider orientation="vertical" flexItem />
+                <div>Back</div>
+                  <Divider orientation="vertical" flexItem />
+                <div>Base</div>
+              </div>
+          </div>
 
         <div>
             <ThirdForm/>
