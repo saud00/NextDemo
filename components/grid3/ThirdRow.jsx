@@ -3,6 +3,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import styles from '../../styles/Home.module.css'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import CachedIcon from '@mui/icons-material/Cached';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 
 function ThirdRow() {
     const [date, setDate] = useState(new Date())
@@ -10,7 +11,7 @@ function ThirdRow() {
     <div className={styles.thirdRow}>
            <div style={{width:'50%' , display:'flex', flexDirection:'row', justifyContent:'space-around',padding:'30px, 30px'}} >
              <div>
-                <CalendarTodayIcon/>
+                <CalendarTodayIcon sx={{ color:'#006D77' }} />
                 </div>
                 <div>
 
@@ -22,8 +23,9 @@ function ThirdRow() {
                 </div>
             </div>
 
-            <div style={{width:'20%'}}>
-                <CachedIcon/>
+            <div style={{width:'30%',color:'#006D77' }}>
+                <CachedIcon sx={{ color:'silver' }}/> &nbsp;&nbsp;&nbsp;
+                <IntegrationInstructionsIcon sx={{ color:'#006D77' }}/>
             </div>
     </div>
   )

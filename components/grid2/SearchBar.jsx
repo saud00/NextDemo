@@ -8,9 +8,11 @@ export default function SearchBar() {
   return (
     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '20vw','&:focus': {
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center',borderColor: "#E29578",
+      borderRadius:4,
+      width: '20vw','&:focus': {
         boxShadow: `0 0 0 0.2rem`,
-        borderColor: 'green',
+        borderColor: "#E29578",
       }, }}
     >
     <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
