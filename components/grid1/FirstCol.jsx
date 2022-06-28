@@ -5,8 +5,10 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import EditIcon from '@mui/icons-material/Edit';
 import StarIcon from '@mui/icons-material/Star';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
-import { Badge, Box, Paper } from '@mui/material';
+import { Badge, Box, Paper, Typography } from '@mui/material';
+import BookIcon from '@mui/icons-material/Book';
 import styled from '@emotion/styled';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 const StyledBadge = styled(Badge)({
   "& .MuiBadge-badge": {
@@ -27,14 +29,14 @@ function FirstCol() {
 
         </div>
         <div className={styles.firstRef} >
-            <div className={styles.firstHeadings} > <AssignmentIcon/> &nbsp; Journals</div>
-            <div  className={styles.firstHeadings}> <EditIcon/>&nbsp; Drafts</div>
-            <div className={styles.firstHeadings}> <StarIcon/>&nbsp;Favourate</div>
-            <div className={styles.firstHeadings}> <SettingsIcon/> &nbsp;Settings</div>
+            <div className={styles.firstHeadings} > <BookIcon sx={{color:'#84CCC5'}} /> Journals</div>
+            <div  className={styles.firstHeadings}> <EditIcon sx={{color:'#84CCC5'}} /> Drafts</div>
+            <div className={styles.firstHeadings}> <StarIcon sx={{color:'#84CCC5'}} /> Favourate</div>
+            <div className={styles.firstHeadings}> <SettingsIcon sx={{color:'#84CCC5'}}/> Settings</div>
         </div>
-        {/* <div  className={styles.firstlast}>
-          <ScreenShareIcon/>
-        </div> */}
+        <div  className={styles.firstlast}>
+            <ExitToAppIcon sx={{color:'#84CCC5'}} />
+        </div>
     </div>
   )
 }

@@ -11,10 +11,8 @@ export default function SearchBar() {
     <Paper
     variant="outlined"
       sx={{ p: '2px 4px', display: 'flex', alignItems: 'center',
-      borderRadius:4, borderColor: '#E29578',
+      borderRadius:4,  border: '3px solid  #e29578',
       width: '20vw',
-        boxShadow: `#E29578 0.2rem`,
-        // borderColor: "#E29578",
       }}
     >
     <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
@@ -23,7 +21,7 @@ export default function SearchBar() {
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         placeholder="search"
-        // inputProps={{ 'aria-label': 'search google maps' }}
+        inputProps={{ style: { fontFamily: 'Montserrat',fontSize:"15px", color:'black'}}}
       />
     </Paper>
   );

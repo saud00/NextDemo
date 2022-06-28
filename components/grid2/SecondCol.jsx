@@ -17,7 +17,8 @@ console.log(Qs)
         </div>
 
         <span className={styles.secondHeading}>
-            <Typography  className={styles.secondHead} sx={{fontWeight:'bold'}} align='left'><strong>All Journals</strong> </Typography>
+          <p className={styles.secondHead} style={{fontWeight:'700'}}>All Journals</p>
+            
             <Typography variant='caption'  className={styles.secondHead}  align='right' style={{textDecoration: 'underline'}}>
              See all
             </Typography>

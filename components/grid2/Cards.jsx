@@ -11,7 +11,9 @@ import { Divider } from '@mui/material';
 
 export default function Cards({val}) {
   return (
-    <Card  sx={{ minWidth: 200, fontFamily:'Montserrat' , mt:5, backgroundColor: "#E29578",border: '1px solid #eaeaea',color:'white', borderRadius:6,"&:hover": {
+    <Card  sx={{ minWidth: 200, fontFamily:'Montserrat' , mt:5, backgroundColor: "#E29578",color:'white',
+    borderRadius:6,"&:hover": {
+      filter:`drop-shadow(0px 0px 5px #E29578)`,
         backgroundColor: "#E29578",
     }, }}>
       <CardContent style={{display: 'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
