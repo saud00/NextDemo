@@ -7,41 +7,50 @@ import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
-import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { TextField, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { TextField, FormControl, InputLabel, MenuItem, Select, InputBase } from '@mui/material';
 import NavigationIcon from '@mui/icons-material/Navigation'
 import { SmartButton } from '@mui/icons-material';
+import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
 
-
-const CssTextField = styled(TextField, {
-  shouldForwardProp: (props) => props !== "focusColor"
-})((p) => ({
-  // input label when focused
-  "& label.Mui-focused": {
-    color: p.focusColor
-  },
-  // focused color for input with variant='standard'
-  "& .MuiInput-underline:after": {
-    borderBottomColor: p.focusColor
-  },
-  // focused color for input with variant='filled'
-  "& .MuiFilledInput-underline:after": {
-    borderBottomColor: p.focusColor
-  },
-  // focused color for input with variant='outlined'
-  "& .MuiOutlinedInput-root": {
-    "&.Mui-focused fieldset": {
-      borderColor: p.focusColor
-    }
-  }
-}));
-
-
+// const BootstrapInput = styled(InputBase)(({ theme }) => ({
+//   'label + &': {
+//     marginTop: theme.spacing(3),
+//   },
+//   '& .MuiInputBase-input': {
+//     borderRadius: 4,
+//     position: 'relative',
+//     backgroundColor: theme.palette.background.paper,
+//     border: '1px solid #ced4da',
+//     fontSize: 16,
+//     padding: '10px 26px 10px 12px',
+//     transition: theme.transitions.create(['border-color', 'box-shadow']),
+//     // Use the system font instead of the default Roboto font.
+//     fontFamily: [
+//       '-apple-system',
+//       'BlinkMacSystemFont',
+//       '"Segoe UI"',
+//       'Roboto',
+//       '"Helvetica Neue"',
+//       'Arial',
+//       'sans-serif',
+//       '"Apple Color Emoji"',
+//       '"Segoe UI Emoji"',
+//       '"Segoe UI Symbol"',
+//     ].join(','),
+//     '&:focus': {
+//       borderRadius: 4,
+//       borderColor: '#80bdff',
+//       boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+//     },
+//   },
+// }));
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   '& .MuiToggleButtonGroup-grouped': {
     margin: theme.spacing(0.5),
@@ -49,12 +58,15 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     border: 0,
     '&.Mui-disabled': {
       border: 0,
+      color:'white',
     },
     '&:not(:first-of-type)': {
       borderRadius: theme.shape.borderRadius,
+      color:'white',
     },
     '&:first-of-type': {
       borderRadius: theme.shape.borderRadius,
+      color:'white',
     },
   },
 }));
@@ -67,17 +79,25 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   };
 
   return (
-    <FormControl sx={{ m: 1, minWidth: val == 'Arial' ? 120: 70 , color:'white',  }} size="small">
+    <FormControl sx={{ m: 1, minWidth: val == 'Arial' ? 100: 60 , color:'white',  }} size="small">
       <InputLabel id="demo-select-small"  sx={{color:'white'}}>{val}</InputLabel>
-      {/* <CssTextField focusColor='red' /> */}
+     
       <Select
         labelId="demo-select-small"
         id="demo-select-small"
-        // value='Arial'
-        // label={val}
         onChange={handleChange}
-        sx={{color:'white', borderRadius:4, borderColor:'white'}}
+        sx={{color:'white', 
+          '.MuiOutlinedInput-notchedOutline': {
+            borderColor: 'white',
+            borderRadius:3,
+            color:'white',
+            fontSize: '3px'
+          },'	.MuiSelect-icon': {
+            color: 'white',
+        },
+    }}
       >
+       
         <MenuItem value="">
           {/* <em>None</em> */}
         </MenuItem>
@@ -85,6 +105,7 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
         <MenuItem value={20}>Twenty</MenuItem>
         <MenuItem value={30}>Thirty</MenuItem>
       </Select>
+      
     </FormControl>
   );
 }
@@ -115,14 +136,59 @@ export default function CustomizedDividers() {
       >
         <StyledToggleButtonGroup
           size="small"
+          value={formats}
+          onChange={handleFormat}
+          aria-label="text formatting"
+        >
+        <SelectSmall val='Arial' w='80' />
+        <SelectSmall val='14' w='50' />
+        <Divider flexItem orientation="vertical" sx={{  my: 1, color: 'white', bgcolor:'white' }} />
+
+        <Divider flexItem orientation="vertical" sx={{  my: 1, color: 'white', bgcolor:'white' }} />
+        <ToggleButton>
+        <FormatColorTextIcon sx={{fontSize:'170%'}} />
+        <KeyboardArrowDownIcon sx={{fontSize:'100%'}}/>
+        </ToggleButton>
+
+        <ToggleButton>
+        <FormatColorTextIcon sx={{fontSize:'200%'}} />
+        <KeyboardArrowDownIcon sx={{fontSize:'100%'}}/>
+        </ToggleButton>
+
+        <Divider flexItem orientation="vertical" sx={{  my: 1, color: 'white', bgcolor:'white' }} />
+        <ToggleButton>
+        <FormatListBulletedIcon   />
+        </ToggleButton>
+
+        <ToggleButton>
+        <FormatListNumberedIcon  />
+        </ToggleButton>
+
+        <Divider flexItem orientation="vertical" sx={{  my: 1, color: 'white', bgcolor:'white' }} />
+          <ToggleButton value="bold" aria-label="bold">
+            <FormatBoldIcon />
+          </ToggleButton>
+          <ToggleButton value="underlined" aria-label="underlined">
+            <FormatUnderlinedIcon />
+          </ToggleButton>
+          <ToggleButton value="italic" aria-label="italic">
+            <FormatItalicIcon />
+          </ToggleButton>
+          {/* <ToggleButton value="color" aria-label="color" disabled>
+            <FormatColorFillIcon />
+            <ArrowDropDownIcon />
+          </ToggleButton> */}
+        <Divider flexItem orientation="vertical" sx={{  my: 1, color: 'white', bgcolor:'white' }} />
+        </StyledToggleButtonGroup>
+
+        <StyledToggleButtonGroup
+          size="small"
           sx={{ color:'white'}}
           value={alignment}
           exclusive
           onChange={handleAlignment}
           aria-label="text alignment"
         >
-             <SelectSmall val='Arial' w='100' />
-             <SelectSmall val='14' w='50' />
           <ToggleButton value="left" aria-label="left aligned">
             <FormatAlignLeftIcon />
           </ToggleButton>
@@ -134,27 +200,6 @@ export default function CustomizedDividers() {
           </ToggleButton>
           <ToggleButton value="justify" aria-label="justified" disabled>
             <FormatAlignJustifyIcon />
-          </ToggleButton>
-        </StyledToggleButtonGroup>
-        <Divider flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
-        <StyledToggleButtonGroup
-          size="small"
-          value={formats}
-          onChange={handleFormat}
-          aria-label="text formatting"
-        >
-          <ToggleButton value="bold" aria-label="bold">
-            <FormatBoldIcon />
-          </ToggleButton>
-          <ToggleButton value="italic" aria-label="italic">
-            <FormatItalicIcon />
-          </ToggleButton>
-          <ToggleButton value="underlined" aria-label="underlined">
-            <FormatUnderlinedIcon />
-          </ToggleButton>
-          <ToggleButton value="color" aria-label="color" disabled>
-            <FormatColorFillIcon />
-            <ArrowDropDownIcon />
           </ToggleButton>
         </StyledToggleButtonGroup>
       </Paper>

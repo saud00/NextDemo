@@ -11,18 +11,26 @@ import { Divider } from '@mui/material';
 
 export default function Cards({val}) {
   return (
-    <Card className={styles.card} sx={{ minWidth: 200, mt:6, backgroundColor: "#E29578",border: '1px solid #eaeaea',color:'white', borderRadius:6,"&:hover": {
+    <Card  sx={{ minWidth: 200, fontFamily:'Montserrat' , mt:5, backgroundColor: "#E29578",border: '1px solid #eaeaea',color:'white', borderRadius:6,"&:hover": {
         backgroundColor: "#E29578",
     }, }}>
-      <CardContent style={{display: 'flex', flexDirection:'row'}}>
-        <Typography className={styles.secondCardInner} sx={{ fontSize: 14 }} gutterBottom>
-         <strong>  10:00 PM</strong> 
+      <CardContent style={{display: 'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
+        <Box sx={{width:'35%',display:'flex', minHeight:'100%', alignItems:'center'}}>
+
+        <Typography className={styles.secondCardInner} sx={{ fontWeight:'bold',fontFamily:'Montserrat' }} gutterBottom>
+           10:00 PM
         </Typography>
-        <Divider orientation="vertical" flexItem />
-        <Typography variant="caption" className={styles.secondCardInner} style={{textAlign:'justify'}} component="div">
+        </Box>
+        <Divider orientation="vertical" flexItem sx={{bgcolor:'white'}}/>
+<Box sx={{width:'65%'}}>
+
+        <Typography className={styles.secondCardInner} style={{fontWeight:'bold',textAlign:'justify',fontFamily:'Montserrat'}} component="div">
            <strong>{val.title}</strong>  <br/>
+           </Typography>
+        <Typography variant="caption" className={styles.secondCardInner} style={{fontWeight:'normal',textAlign:'justify',fontFamily:'Montserrat'}} component="div">
           {val.question}
         </Typography>
+</Box>
         
       </CardContent>
       <CardActions>

@@ -4,17 +4,17 @@ const initialState = {
     
     {
         id:1,
-        title:'your thought',
+        title:'Your thought',
         question:'What are the features of React?'
       },
       {
         id:3,
-        title:'todays dream',
+        title:'Todays dream',
         question:'Can web browsers read JSX directly? '
       },
       {
         id:4,
-        title:'new dream',
+        title:'New dream',
         question:'What is the virtual DOM?'
     },
     

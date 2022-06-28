@@ -7,29 +7,33 @@ import Avatar from '@mui/material/Avatar';
 import styles from '../../styles/Home.module.css'
 import { styled } from '@mui/material/styles';
 
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 
-const CssTextField = styled(TextField, {
-  shouldForwardProp: (props) => props !== "focusColor"
-})((p) => ({
-  // input label when focused
-  "& label.Mui-focused": {
-    color: p.focusColor
+
+const CssTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: '#E29578',
   },
-  // focused color for input with variant='standard'
-  "& .MuiInput-underline:after": {
-    borderBottomColor: p.focusColor
+  '& .MuiInput-underline:after': {
+    borderBottomColor: '#E29578',
   },
-  // focused color for input with variant='filled'
-  "& .MuiFilledInput-underline:after": {
-    borderBottomColor: p.focusColor
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: '#E29578',
+    },
+    '&:hover fieldset': {
+      borderColor: '#E29578',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#E29578',
+    },
   },
-  // focused color for input with variant='outlined'
-  "& .MuiOutlinedInput-root": {
-    "&.Mui-focused fieldset": {
-      borderColor: p.focusColor
-    }
-  }
-}));
+});
+
+const longText = `
+The text disappear option is active at the moment. To turn it off go to settings
+`;
+
 
 
 export default function ThirdForm(props) {
@@ -63,24 +67,28 @@ export default function ThirdForm(props) {
   return (
     <>
       
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
 
-        <Grid item xs={10} sm={10}>
+        <Grid item xs={12} sm={12}>
+
           <CssTextField focusColor='#E29578' onChange={(e)=>handleChange(e)} required id="title" placeholder='Enter Title here' name="title" fullWidth autoComplete="given-name"
            inputProps={{ style: { fontFamily: 'nunito', borderColor:  "#E29578"}}}
             />
         </Grid>
 
-        <Grid item xs={10} sm={10}>
-          <CssTextField focusColor='#E29578' multiline minRows={9} onChange={(e)=>handleChange(e)} placeholder='Your entry here'  required id="question" name="question"  fullWidth autoComplete="family-name" className={styles.notes}
+        <Grid item xs={12} sm={12}>
+
+      <Tooltip title={longText}>
+          <CssTextField focusColor='#E29578' multiline minRows={10} onChange={(e)=>handleChange(e)} placeholder='Your entry here'  required id="question" name="question"  fullWidth autoComplete="family-name" className={styles.notes}
            inputProps={{ style: { fontFamily: 'nunito', borderColor:  "#E29578", lineHeight: '30px', fontSize:"20px"}}}
           />
+          </Tooltip>
         </Grid>
         
           {/* <Button size='small' variant='contained' style={{borderRadius: 50}} onClick={saveProject} > <AddIcon/> </Button> */}
         
-        <Grid item  xs={10} sm={10}>
-        <Avatar sx={{ width: 56, height: 56 }} style={{backgroundColor:'#006D77',
+        <Grid item  xs={12} sm={12}>
+        <Avatar sx={{ width: 56, height: 56, position:'relative', bottom:'10px', left:'-100px' }} style={{backgroundColor:'#006D77',
           border: `1px solid #006D77`
           }}>
             <AddIcon sx={{ width: 26, height: 36 }} onClick={saveProject} />

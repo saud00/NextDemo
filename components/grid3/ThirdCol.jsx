@@ -6,28 +6,31 @@ import ThirdForm from './ThirdForm';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import CustomizedDividers from './ToogleButtons';
 import { Divider } from '@mui/material';
+import styled from '@emotion/styled';
 
 function ThirdCol() {
   return (
     <Box className={styles.thirdCol}>
-        <div style={{width: '100%', margin:'0px, 30px'}}>
+        <div style={{width: '100%'}}>
             <ThirdRow/>
         </div>
 
 
-          <div style={{width: '90%',  backgroundColor:"#84CCC5",  color:'white', margin:'15px 0px' }}>
+          <Box sx={{borderRadius: 5}} style={{width: '100%', minHeight:90, overflow:'hidden',  backgroundColor:"#84CCC5", my:9, color:'white'}}>
+
               <CustomizedDividers  />
 
-              <div style={{minHeight:40, backgroundColor:"#84CCC5", display:'flex', flexDirection:'row',borderRadius:'10px' ,justifyContent:'space-evenly', marginTop:'14px' }} >
-                <div>Blue</div>
-                   <Divider orientation="vertical" flexItem />
-                <div>Back</div>
-                  <Divider orientation="vertical" flexItem />
-                <div>Base</div>
+              <div style={{padding:15, backgroundColor:"#84CCC5", display:'flex', flexDirection:'row',borderRadius:'10px' ,justifyContent:'space-evenly'}}>
+                <div>Dream</div>
+                   <Divider orientation="vertical" flexItem sx={{bgcolor:'white', color:'white'}} />
+                <div>Job</div>
+                  <Divider orientation="vertical" flexItem sx={{bgcolor:'white', color:'white'}} />
+                <div>Goals</div>
               </div>
-          </div>
 
-        <div>
+          </Box>
+
+        <div style={{width:'100%'}}>
             <ThirdForm/>
         </div>
     </Box>

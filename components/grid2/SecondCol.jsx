@@ -17,9 +17,14 @@ console.log(Qs)
         </div>
 
         <span className={styles.secondHeading}>
-            <Typography  className={styles.secondHead}  align='left'>All Journals</Typography>
-            <Typography variant='caption'  className={styles.secondHead}  align='right' style={{textDecoration: 'underline'}}>See all</Typography>
+            <Typography  className={styles.secondHead} sx={{fontWeight:'bold'}} align='left'><strong>All Journals</strong> </Typography>
+            <Typography variant='caption'  className={styles.secondHead}  align='right' style={{textDecoration: 'underline'}}>
+             See all
+            </Typography>
         </span>
+
+            <Typography sx={{width:'100%', fontFamily:'Montserrat', color:'#5B5B5B', mt:5 }}  align='left'>23rd January’21</Typography>
+
 
         <div>
         {newQs.length !== 0 && newQs ? newQs.map((val,ind)=>{
