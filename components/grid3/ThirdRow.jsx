@@ -18,7 +18,7 @@ function ThirdRow() {
              <div>
                 <CalendarTodayIcon sx={{ color:'#006D77' }} />
                 </div>
-                <div style={{display:'flex', flexDirection:'column', fontWeight: 700, justifyContent:'space-around', color:'#5B5B5B;'}} >
+                <div style={{display:'flex', flexDirection:'column', fontWeight: 700, justifyContent:'space-around', color:'#5B5B5B'}} >
                   <div>25th, June, 2022</div>
                   <div style={{fontFamily: 'Montserrat',
                       fontStyle: 'normal',

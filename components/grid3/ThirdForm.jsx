@@ -118,7 +118,7 @@ export default function ThirdForm(props) {
         </div>
 
         <Grid item  xs={12} sm={12}>
-        <Avatar sx={{ width: 56, height: 56, position:'relative',filter:`drop-shadow(0px 0px 5px #006D77)`, bottom:'10px', left:'-140px' }} style={{backgroundColor:'#006D77',
+        <Avatar sx={{ width: 56, height: 56, position:'relative',filter:`drop-shadow(0px 0px 5px #006D77)`, bottom:'40px', left:'-130px' }} style={{backgroundColor:'#006D77',
           border: `1px solid #006D77`
           }}>
             <AddIcon sx={{ width: 46, height: 46}} onClick={saveProject} />

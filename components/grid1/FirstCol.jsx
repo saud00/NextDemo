@@ -10,6 +10,7 @@ import BookIcon from '@mui/icons-material/Book';
 import styled from '@emotion/styled';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
+
 const StyledBadge = styled(Badge)({
   "& .MuiBadge-badge": {
     color: "red",
@@ -22,10 +23,10 @@ function FirstCol() {
     <div className={styles.firstCol}>
         <div className={styles.firstImg}>
 
-          <StyledBadge badgeContent=""  overlap="circular" style={{ transform: 'translate(100px, -90px)'}} >
+          <StyledBadge badgeContent=""  overlap="circular" style={{ transform: 'translate(100px, -90px)', zIndex:'111'}} >
           </StyledBadge>
 
-            <img src='/3.jpeg' height={100} width={100} style={{borderRadius: 14}} />
+            <img  src='/logo.png' alt='logo' height={100} width={100} style={{borderRadius: 14}} />
 
         </div>
         <div className={styles.firstRef} >

@@ -1,7 +1,5 @@
 import { Box } from '@mui/material'
-
 import Head from 'next/head'
-import Image from 'next/image'
 import FirstCol from '../components/grid1/FirstCol'
 import SecondCol from '../components/grid2/SecondCol'
 import ThirdCol from '../components/grid3/thirdCol'

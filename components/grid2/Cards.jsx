@@ -23,7 +23,7 @@ export default function Cards({val}) {
            10:00 PM
         </Typography>
         </Box>
-        <Divider orientation="vertical" flexItem sx={{bgcolor:'white'}}/>
+        <Divider orientation="vertical" flexItem sx={{bgcolor:'white', mr:1}}/>
 <Box sx={{width:'65%'}}>
 
         <Typography className={styles.secondCardInner} style={{fontWeight:'bold',textAlign:'justify',fontFamily:'Montserrat'}} component="div">

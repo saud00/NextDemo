@@ -11,12 +11,12 @@ import styled from '@emotion/styled';
 function ThirdCol() {
   return (
     <Box className={styles.thirdCol}>
-        <div style={{width: '100%'}}>
+        <Box style={{width: '100%'}}>
             <ThirdRow/>
-        </div>
+        </Box>
 
 
-          <Box sx={{borderRadius: 5}} style={{width: '100%', minHeight:90, overflow:'hidden',  backgroundColor:"#84CCC5", my:9, color:'white'}}>
+          <Box sx={{borderRadius: 5}} style={{width: '100%', minHeight:90, overflow:'hidden',  backgroundColor:"#84CCC5",color:'white'}}>
 
               <CustomizedDividers  />
 
@@ -30,9 +30,9 @@ function ThirdCol() {
 
           </Box>
 
-        <div style={{width:'100%'}}>
+        <Box style={{width:'100%'}}>
             <ThirdForm/>
-        </div>
+        </Box>
     </Box>
   )
 }
